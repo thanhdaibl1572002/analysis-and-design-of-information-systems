@@ -1,0 +1,167 @@
+@import ../../../variables/variables
+
+._container
+    width: 100%
+    flex-direction: column
+    row-gap: 10px
+
+    ._tool
+        width: 100%
+        height: fit-content
+        padding: 10px
+        flex-direction: column
+        row-gap: 15px
+        background: $white-color
+        border-radius: 5px
+        border: $main-border
+
+        ._tool__top
+
+            h2
+                text-transform: uppercase
+                font-size: 22px
+                font-weight: 500
+
+        ._tool__center
+            align-items: center
+            justify-content: space-between
+
+            ._tool__center__left__search
+                height: 42px
+                align-items: center
+                border-radius: 5px
+                padding: 0 10px
+                border: $main-border
+
+                input
+                    width: 350px
+                    height: 100%
+                    padding: 0 10px 0 2px
+                    font-size: 15px 
+
+                    &::placeholder
+                        font-size: 14px
+                        color: get-color-level($black-color, 50)
+                        font-weight: 400
+
+                svg
+                    color: $main-color
+                    font-size: 22px
+                    cursor: pointer
+
+            ._tool__center__right
+                align-items: center
+                column-gap: 10px
+
+        ._tool__bottom
+
+
+    ._table
+        width: 100%
+        height: 529px
+        background: $white-color
+        border-radius: 5px
+        overflow-x: scroll
+        overflow-y: scroll
+
+        table
+            width: 100%
+            height: fit-content
+            border-collapse: collapse
+            border-spacing: 0
+            border-radius: 5px
+
+            thead
+                background: $white-color
+                height: 40px
+
+                th
+                    font-weight: 400
+                    font-size: 15px
+                    color: $main-color
+                    text-transform: capitalize
+                    border-left: $main-border
+                    white-space: nowrap
+
+                th._is__sort 
+                    cursor: pointer
+
+                    span
+                        align-items: center
+                        justify-content: space-between
+                        column-gap: 3px
+
+                        svg
+                            color: $blue-color
+                            font-size: 14px
+
+            th, td
+                padding: 8px
+                border: $main-border
+                text-align: left
+
+            tbody
+
+                tr
+                    max-height: 80px
+                    height: 80px
+
+                    &:hover
+                        background: get-color-level($main-color, 5)
+                        color: $main-color
+                        cursor: pointer
+
+                td
+                    font-size: 14px
+                    white-space: nowrap
+
+                    span
+                        justify-content: center
+                        align-items: center
+
+                        img
+                            width: 48px
+
+                ._not__found
+                    border: none
+                    text-align: center
+                    font-size: 17px
+                    color: $red-color
+                    cursor: default
+
+                    &:hover
+                        background: $white-color
+                        color: $red-color
+                        
+
+    ._pagination
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        background: $white-color
+        border: $main-border
+        border-radius: 5px
+        padding: 10px
+
+        ._pagination__left
+            align-items: center
+            font-size: 14px
+            column-gap: 5px
+
+        ._pagination__right
+            column-gap: 5px
+            align-items: center
+
+            ._pagination__current
+                align-items: center
+                font-size: 14px
+                font-weight: 500
+                column-gap: 5px
+
+                input
+                    width: 50px
+                    text-align: center
+                    font-size: 14px
+                    border: $main-border
+                    height: 30px
+            
